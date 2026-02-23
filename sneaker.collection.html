@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+ <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<style>
+ 
+ body{
+  background-color:white;
+  box-sizing:border-box;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+ }
+
+ .header{width: 100%; 
+  position: sticky; top:0px;
+
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color:white;
+  transition: background-color 1.5s ;
+  color: black;
+ }
+
+ .header:hover{
+
+   background-color: #c2c1be
+ }
+
+
+ .menu a{
+    text-decoration: none;
+    color: black;
+width: 130px;
+height: 29px;
+border-radius:12px;
+text-align: center;
+font-family: Atkinson Hyperlegible Mono;
+    font-weight: 500;
+    transition: text-decoration 3s;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+
+ }
+
+  .menu a::before{
+   content: "";
+    text-decoration: none;
+    color:black;
+width: 130px;
+height: 29px;
+border-radius:12px;
+background-color:rgba(255, 255, 255, 0.533);
+position: absolute;
+top: 0px;
+left:0px;
+z-index:-2;
+  transform: translateY(-110%);
+
+  transition:  transform 0.6s ease;
+  overflow: hidden;
+}
+
+ .menu a:hover::before{
+  transform: translateY(0%);
+}
+ .menu a:hover{
+ color:black
+ }
+
+
+
+.icon-section {
+  width: 30vw;
+}
+
+.nav-icon {
+  display: none;
+} 
+.main{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden; 
+}
+
+.circle{
+  position: absolute;
+  right: -370px;      
+  top: 0%;
+  width: 42%;
+  height: 620px;
+  background-color: #484848;
+  border-radius: 50%;
+  z-index: -1;
+
+}
+
+.circle h1{
+   writing-mode: sideways-lr;
+ font-size: 148px;
+ margin-top: 50px;
+ color: white;
+ font-weight: 700;
+}
+
+
+.banner-wrapper{
+  filter: drop-shadow(px);
+}
+
+.banner-sneaker img {
+  max-width: 100%;
+  height: auto;
+}
+
+.brands-image{
+  width: 100%;
+ gap: 23px;
+  border: 1px solid black;
+  
+}
+
+.black-sneaker-2 {
+  background:
+    linear-gradient(
+      rgba(24, 23, 23, 0.93),
+      rgba(35, 32, 32, 0.04),
+      rgb(23, 22, 22),
+      rgba(45, 43, 43, 0.926)
+    ),
+    url("half.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;}
+
+  .black-sneaker-2 {
+  min-height: 100vh;
+}
+
+
+.pair-images {
+  height: 450px;           /* Desktop height */
+}
+
+.pair-images img {
+  height: 100%;
+}
+
+.sneaker-img{
+  background-color: white;
+  box-shadow: gray; 
+  transition:background-color 0.7s;
+  height: 250px;
+   object-fit: contain;
+}
+
+.sneaker-img:hover{
+  background-color: rgba(131, 128, 128, 0.087);
+  border-radius: 23px;
+}
+
+
+
+.footer-last{
+
+  background-color: #1E1E1E;
+  color: white;
+  padding: 40px; 
+  border-top: 2px solid gray;
+}
+
+
+
+
+.footer-last input{
+  background-color: #312c2c;;
+  border: none;
+  padding: 13px;
+  width: 100%;
+  margin-top: 40px;
+  outline: none;
+  border-radius: 12px;
+  height: 75px;
+}
+
+.footer-last input::placeholder{
+  color: white;
+ font-size: 1.4rem;
+ text-align: center;
+ 
+}
+
+
+@media (max-width:740px){
+  .brands-image{
+  flex-wrap:wrap;
+  }
+  
+  .black-sneaker-1{
+    display: none;
+  } 
+
+.black-sneaker-2 {
+  min-height:50vh;
+}
+
+
+
+}
+
+@media (max-width: 875px) {
+  .icon-section {
+    width: 21%;
+  }
+
+
+
+  .icon-section i{
+  display: none;
+}
+
+.icon-section button{
+  width: 50px;
+
+}
+
+  .nav-icon {
+    display: inline;
+  }
+
+  .menu{
+    display:flex;
+ width: 30%;
+  }
+
+   .menu a{
+   display: none;
+  }
+
+  i{
+    font-size: 12px;
+  }
+
+  
+
+ .pair-images {
+    height: 220px;
+  }
+ 
+}
+ @media (max-width:920px){
+
+  .main{
+    height: auto;
+    min-height: auto;
+  }
+
+  .banner-wrapper{
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }  
+
+  .banner-wrapper > div{
+    width: 100% !important;
+    height: auto;
+  }
+
+  .circle{
+    display: none;
+
+  }
+  
+
+  }
+ 
+
+
+
+</style>
+<body>
+    <div class="container-fluid header" >
+    <!-- <div class="mt-2" style="width: 100%; height: 40px; border: 1px solid  #000;;">
+      <h1 class=" ms-5 align" style="width: 30%; height: 100%; font-size: 12px; font-family: orbitron; border: 1px solid black;">SELLER</h1> -->
+    <div class="d-flex  justify-content" style="width: 100%; height: 100px; ">
+        <div style=" width: 33%; height: 100%;  text-align: start;  font-size: 35px; font-family: orbitron;font-weight: 300;">
+          <h3 class="mt-4 ms-5" style="width: 23%; height: 50%; " >SELLER</h3></div>
+           <div class="menu  d-flex justify-content-around align-items-center" style="  width: 52%; height: 100%; font-size: 17px; list-style: none;">
+            <a href="sneaker.html" >Home</a>            
+            <a href="sneaker.about.html">About us</a>
+            <a href="sneaker.collection.html">Collection</a>            
+            <a href="sneaker.brands.html">Brands</a>
+            <a href="sneaker.contact.html">Contact us</a> 
+             </div>
+
+             <div class="icon-section d-flex align-items-center  " style="width: 20%; height: 100%; gap: 12px; ">
+             <i class="fa-solid fa-magnifying-glass ms-3"  style=" font-size:23px"></i>
+             <i class="fa-regular fa-user " style=" font-size:23px"></i>
+              <button class="btn btn-outline-dark " style="width: 90px; height: 40px; border-radius: 20px; font-weight: 600;">Login</button>
+         </div>
+ 
+ <i class="nav-icon fa-solid fa-bars ms-3 mt-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style="font-size: 30px; color:#030303; margin-top:15px;"></i>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="border " style="height: 234px;  display: flex; flex-direction: column; gap: 15px;
+font-family:Atkinson Hyperlegible Mono; color: #000;">
+      <li class="mt-3" ><a href="sneaker.html" class="menu-link" style="text-decoration: none;  color: #000;">Home</a></li>
+      <li><a href="sneaker.about.html" class="menu-link"style="text-decoration: none;   color: #000;">About us</a></li>
+      <li><a href="sneaker.collection.html" class="menu-link"style="text-decoration: none;   color: #000;">Collection</a></li>
+      <li><a href="sneaker.brands.html" class="menu-link" style="text-decoration: none;  color: #000;">Brands</a></li>
+      <li><a href="sneaker.contact.html" class="menu-link" style="text-decoration: none;  color: #000;">Contact</a></li>
+      </ul>
+
+  </div>
+</div>
+    </div>
+    </div>
+  
+    <h1 class="mt-3" style="font-size: 4em; font-family: orbitron;">Collection</h1>
+    
+    <div class="container-fluid border ">
+  <a href="#" class=" text-dark text-decoration-none " style="font-size: 4em">Nike</a>
+
+  <div class="row gap-5 justify-content-center border" >
+
+    <div class="col-12 col-sm-6 col-md-3 col-lg-2" >
+      <img src="AIR+FORCE+1+_2707+LV8.png"class="img-fluid  sneaker-img">
+        <h5>Air Force 1 </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹71,400.00</h5>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+      <img src="NIKE+DUNK+LOW+RETRO.png"
+        class="img-fluid w-100 sneaker-img" >
+            <h5> Dunk Low Retro </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹15,400.00</h5>
+      </div>
+
+
+    <div class="col-12 col-sm-6 col-md-3 col-lg-2" >
+      <img src="AIR+MAX+90.png"
+        class="img-fluid w-100 sneaker-img">
+           <h5>Air Max 90 </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹9,400.00</h5>
+      </div>
+
+
+    <div class="col-12 col-sm-6 col-md-3 col-lg-2"  >
+      <img src="NIKE+C1TY-.png" class="img-fluid w-100 sneaker-img">
+               <h5>Nike C1TY
+Shoes </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹11,400.00</h5>
+          </div>
+
+      <div class="col-12 col-sm-6 col-md-3 col-lg-2"  >
+      <img src="NIKE+GATO.png"class="img-fluid w-100 sneaker-img" >
+                  <h5>Nike Gato </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹10,400.00</h5>
+          </div>
+  </div>
+</div>
+
+   <div class="container-fluid border ">
+  <a href="#" class=" text-dark text-decoration-none " style="font-size: 4em">Puma</a>
+        <div class="row gap-5 justify-content-center">
+                <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="puma_1.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Galaxis Pro</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹3,499.00</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="puma_2.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Blktop Rider Suede Sneakers</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹6,860.00</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="puma_3.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Swift Pulse Sneaker</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹2,899.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6">
+                  <img src="puma_4.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Cirque Slip-On </h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹1,499.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="puma_5.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Skyrocket Lite</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹8,999.00</h5>
+                </div>
+        </div>
+      </div>
+ 
+
+       <div class="container-fluid border ">
+  <a href="#" class=" text-dark text-decoration-none " style="font-size: 4em">Adidas</a>
+        <div class="row gap-5 justify-content-center">
+                <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="adidas_1.png" class="img-fluid w-100 sneaker-img">
+                  <h5>JAUNTZA SHOES</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹3,499.00</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="adidas_2.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Samba OG Shoes</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹10,860.00</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="adidas_3.png" class="img-fluid w-100 sneaker-img">
+                  <h5>Stan Smith</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹6,999.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6">
+                  <img src="adidas_4.png" class="img-fluid w-100 sneaker-img">
+                  <h5>ULTRABOOST 1.0 </h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹4,499.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="adidas_5.png" class="img-fluid w-100 sneaker-img">
+                  <h5>MERCEDES - AMG PETRONAS</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹4,499.00</h5>
+                </div>
+        </div>
+      </div>
+
+
+      
+       <div class="container-fluid border ">
+  <a href="#" class=" text-dark text-decoration-none " style="font-size: 4em">Converse</a>
+        <div class="row gap-5 justify-content-center">
+                <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="converse(1).png" class="img-fluid w-100 sneaker-img">
+                  <h5>Chuck Taylor All Star Throwback</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹5,999</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="converse(2).png" class="img-fluid w-100 sneaker-img">
+                  <h5>All Star Classic Trainer Suede</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹10,860.00</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="converse(3).png" class="img-fluid w-100 sneaker-img">
+                  <h5>CONS AS-1 Pro Suede</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹6,999.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6">
+                  <img src="converse(4).png" class="img-fluid w-100 sneaker-img">
+                  <h5>Chuck 70 Beads</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹4,499.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="converse(5).png" class="img-fluid w-100 sneaker-img">
+                  <h5>Chuck 70 Snakeskin Print</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹4,499.00</h5>
+                </div>
+        </div>
+      </div>
+      
+      
+       <div class="container-fluid border ">
+  <a href="#" class=" text-dark text-decoration-none " style="font-size: 4em">Reebok</a>
+        <div class="row gap-5 justify-content-center">
+                <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="reebook.png" class="img-fluid w-100 sneaker-img" >
+                  <h5>Reebok Classic Leather </h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹5,999</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="reebok(2).png" class="img-fluid w-100 sneaker-img">
+                  <h5>Flylite Harmony</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹1,860.00</h5>
+                </div>
+                  <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="reebok(3).png" class="img-fluid w-100 sneaker-img">
+                  <h5>Stride Runner - Lightweight Training Shoes</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹4,999.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6">
+                  <img src="reebok(4).png" class="img-fluid w-100 sneaker-img">
+                  <h5>Boldfit Driftr Walking Shoes </h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹1,499.00</h5>
+                </div>
+                   <div class="col-12 col-lg-2 col-md-6 ">
+                  <img src="reebok(5).png" class="img-fluid w-100 sneaker-img">
+                  <h5>low Advance - Gym Shoe</h5>
+                <p style="color: grey; font-weight: 500;">Men's shoes </p>
+        <h5>MRP : ₹2,499.00</h5>
+                </div>
+        </div>
+      </div>
+      
+  <div class="row justify-content-evenly gap-5 mt-5 footer-last">
+    <div class="col-lg-3 col-md-4 col-sm-4 p-2" style="line-height: 1.6px;">
+      <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3.5rem; font-weight: 700;">SELLER</h1>
+      <p style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.9; color: rgba(255, 255, 255, 0.85);">Elevate your step with Seller — where style meets comfort. Crafted for those who move with confidence. Where modern design meets everyday comfort.</p>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-4 p-4">
+      <h3 style="font-family:system-ui,; font-weight: 600; font-size: 3rem; text-transform: uppercase;">Company</h3>
+      <ul style="list-style: none; padding: 0; font-family: 'Inter', sans-serif; font-size: 14px;">
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;font-size: 1.5rem;">About us</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Product</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Contact Us</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">FAQ</a></li>
+        <li><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Testimonials</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-4 p-4">
+      <h4 style="font-family: 'Atkinson Hyperlegible Mono', monospace; font-weight: 600; font-size: 45px; text-transform: uppercase;">Follow Us</h4>
+      <div class="ms-4" style="display: flex; gap: 15px; font-size: 28px;">
+        <i class="fa-brands fa-facebook" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-instagram" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-twitter" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-linkedin" style="color: white; cursor: pointer;"></i>
+      
+         <br>
+    </div>
+        <input type="email" placeholder="Your email address">
+        
+    </div>
+  </div>
+</body>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+ 
+</html>

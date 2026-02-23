@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+ <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<style>
+ 
+ body{
+  background-color:white;
+  box-sizing:border-box;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+ }
+
+ .header{width: 100%; 
+  position: sticky; top:0px;
+z-index: 2;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color:white;
+  transition: background-color 1.5s ;
+  color: black;
+ }
+
+ .header:hover{
+
+   background-color: #c2c1be
+ }
+
+
+ .menu a{
+    text-decoration: none;
+    color: black;
+width: 130px;
+height: 29px;
+border-radius:12px;
+text-align: center;
+font-family: Atkinson Hyperlegible Mono;
+    font-weight: 500;
+    transition: text-decoration 3s;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+
+ }
+
+  .menu a::before{
+   content: "";
+    text-decoration: none;
+    color:black;
+width: 130px;
+height: 29px;
+border-radius:12px;
+background-color:rgba(255, 255, 255, 0.533);
+position: absolute;
+top: 0px;
+left:0px;
+z-index:-2;
+  transform: translateY(-110%);
+
+  transition:  transform 0.6s ease;
+  overflow: hidden;
+}
+
+ .menu a:hover::before{
+  transform: translateY(0%);
+}
+ .menu a:hover{
+ color:black
+ }
+
+
+
+.icon-section {
+  width: 30vw;
+}
+
+.nav-icon {
+  display: none;
+} 
+.main{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden; 
+}
+
+.circle{
+  position: absolute;
+  right: -370px;      
+  top: 0%;
+  width: 42%;
+  height: 620px;
+  background-color: #484848;
+  border-radius: 50%;
+  z-index: -1;
+
+}
+
+.circle h1{
+   writing-mode: sideways-lr;
+ font-size: 148px;
+ margin-top: 50px;
+ color: white;
+ font-weight: 700;
+}
+
+
+.banner-wrapper{
+  filter: drop-shadow(px);
+}
+
+.banner-sneaker img {
+  max-width: 100%;
+  height: auto;
+}
+
+.brands-image{
+  width: 100%;
+ gap: 23px;
+  border: 1px solid black;
+  
+}
+
+.black-sneaker-2 {
+  background:
+    linear-gradient(
+      rgba(24, 23, 23, 0.93),
+      rgba(35, 32, 32, 0.04),
+      rgb(23, 22, 22),
+      rgba(45, 43, 43, 0.926)
+    ),
+    url("half.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;}
+
+  .black-sneaker-2 {
+  min-height: 100vh;
+}
+
+
+.pair-images {
+  height: 450px;           /* Desktop height */
+}
+
+.pair-images img {
+  height: 100%;
+}
+
+.sneaker-img{
+  background-color: white;
+  box-shadow: gray; 
+  transition:background-color 0.7s;
+   
+}
+
+.sneaker-img:hover{
+  background-color: rgba(131, 128, 128, 0.087);
+  border-radius: 23px;
+}
+
+
+
+.three-section{
+  transform: translateY(0px);
+   transition:1.3s;
+   box-shadow:rgba(69, 69, 79, 0.621) 0px 7px 29px 0px;
+   border-radius: 12px;
+ background-color:#2f2b2b;
+ color:#f1f1f1;
+}
+
+.three-section:hover{
+  transform: translateY(-50px);
+}
+
+
+.message-button{
+  width:10rem;
+  height:3rem;
+  border-radius:8px;
+  box-shadow: inset 2px 2px  6px rgba(0, 0, 0, 0.147);
+ margin-left: 43px;
+
+}
+
+
+
+.footer-last{
+
+  background-color: #1E1E1E;
+  color: white;
+  padding: 20px; 
+  border-top: 2px solid gray;
+}
+
+
+
+
+.footer-last input{
+  background-color: #312c2c;;
+  border: none;
+  padding: 13px;
+  width: 100%;
+  margin-top: 40px;
+  outline: none;
+  border-radius: 12px;
+  height: 75px;
+}
+
+.footer-last input::placeholder{
+  color: white;
+ font-size: 1.4rem;
+ text-align: center;
+ 
+}
+
+@media (max-width:740px){
+  .brands-image{
+  flex-wrap:wrap;
+  }
+  
+  .black-sneaker-1{
+    display: none;
+  } 
+
+.black-sneaker-2 {
+  min-height:50vh;
+}
+
+
+
+}
+
+@media (max-width: 875px) {
+  .icon-section {
+    width: 21%;
+  }
+
+
+
+  .icon-section i{
+  display: none;
+}
+
+.icon-section button{
+  width: 50px;
+
+}
+
+  .nav-icon {
+    display: inline;
+  }
+
+  .menu{
+    display:flex;
+ width: 30%;
+  }
+
+   .menu a{
+   display: none;
+  }
+
+  i{
+    font-size: 12px;
+  }
+
+  
+
+ .pair-images {
+    height: 220px;
+  }
+ 
+}
+ @media (max-width:920px){
+
+  .main{
+    height: auto;
+    min-height: auto;
+  }
+
+  .banner-wrapper{
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }  
+
+  .banner-wrapper > div{
+    width: 100% !important;
+    height: auto;
+  }
+
+  .circle{
+    display: none;
+
+  }
+  
+
+  }
+ 
+
+
+
+</style>
+</head>
+<body>
+    <div class="container-fluid header" >
+ <div class="d-flex  justify-content" style="width: 100%; height: 100px; ">
+        <div style=" width: 33%; height: 100%;  text-align: start;  font-size: 35px; font-family: orbitron;font-weight: 300;">
+          <h3 class="mt-4 ms-5" style="width: 23%; height: 50%; " >SELLER</h3></div>
+           <div class="menu  d-flex justify-content-around align-items-center" style="  width: 52%; height: 100%; font-size: 17px; list-style: none;">
+            <a href="sneaker.html" >Home</a>            
+            <a href="sneaker.about.html">About us</a>
+            <a href="sneaker.collection.html">Collection</a>            
+            <a href="sneaker.brands.html">Brands</a>
+            <a href="sneaker.contact.html">Contact us</a> 
+             </div>
+
+             <div class="icon-section d-flex align-items-center  " style="width: 20%; height: 100%; gap: 12px; ">
+             <i class="fa-solid fa-magnifying-glass ms-3"  style=" font-size:23px"></i>
+             <i class="fa-regular fa-user " style=" font-size:23px"></i>
+              <button class="btn btn-outline-dark " style="width: 90px; height: 40px; border-radius: 20px; font-weight: 600;">Login</button>
+         </div>
+ 
+ <i class="nav-icon fa-solid fa-bars ms-3 mt-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style="font-size: 30px; color:#030303; margin-top:15px;"></i>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="border " style="height: 234px;  display: flex; flex-direction: column; gap: 15px;
+font-family:Atkinson Hyperlegible Mono; color: #000;">
+      <li class="mt-3" ><a href="sneaker.html" class="menu-link" style="text-decoration: none;  color: #000;">Home</a></li>
+      <li><a href="sneaker.about.html" class="menu-link"style="text-decoration: none;   color: #000;">About us</a></li>
+      <li><a href="sneaker.collection.html" class="menu-link"style="text-decoration: none;   color: #000;">Collection</a></li>
+      <li><a href="sneaker.brands.html" class="menu-link" style="text-decoration: none;  color: #000;">Brands</a></li>
+      <li><a href="sneaker.contact.html" class="menu-link" style="text-decoration: none;  color: #000;">Contact</a></li>
+      </ul>
+
+  </div>
+</div>
+    </div>
+    </div>
+
+    <!---------------------------------------------contact  --------------------------------------->
+     <h1 style="text-align: center;">Contact Us</h1>
+     <p style="text-align: center;">Got questions about orders,sizing and drops?We're here to help</p>
+     <div class="row gap-5 ms-5 py-5 border justify-content-center  "  style="width: 90%;">
+      <h3 style="text-align: center; color: gray; font-family: 'Lucida Sans'">QUICK SUPPORT OPTIONS</h3>
+      <div class="three-section col-12 col-lg-3 col-md-3 col-sm-3 p-4" style="line-height: 2;" >
+        <i class="fa-solid fa-envelope" style="font-size: 25px; color: white;"></i>
+        <span style="color: white;font-weight: 600;" >Email SUPPORT</span><br>
+        <span style="color: white;">Support@your</span><br>
+        <span style="color: white;">Response Within 24 hours</span>
+      </div>
+      <div class="three-section col-12 col-lg-3 col-md-3 col-sm-3 p-4"style="line-height: 2;" >
+    <i class="fa-solid fa-phone" style="color:white; font-size: 25px;"></i>
+        <span style="color:white;font-weight: 600;">WhatsApp/Phone</span><br>
+        <span style="color: white;">+91-12345-67890</span><br>
+        <span  style="color: white;">10AM - 7 PM (Mon - Sat)</span>
+      </div>
+       <div class="three-section col-12 col-lg-3 col-md-3 col-sm-3 p-4" style="line-height: 2;">
+    <i class="fa-brands fa-instagram" style="color:white;font-size: 25px;"></i>
+        <span style="color:white; font-weight: 600;">instagram DM</span><br>
+        <span style="color: white;">@yourSeller</span><br>
+        <span  style="color: white;">For quick updates & drops</span>
+      </div>
+     </div>
+
+    <div class="row ms-5 mt-5 justify-content-evenly border gap-3" style="width: 90%; padding-bottom: 40px; padding-top: 40px; border-radius: 7px;"  >
+     <h1 style="text-align: center;">Send Us a Message</h1>
+     <div class="col-12 col-lg-4 p-5 col-md-6 col-sm-6 mt-5 d-flex flex-column three-section gap-3  " style=" outline: none; line-height: 2;">
+         <form action="/action" class="d-flex flex-column gap-3">
+       <input type="text" name="fname" placeholder="Full Name" style="width: 70%; border-radius: 7px; padding: 8px; outline: none">
+           <input type="text" name="email" placeholder="Email Address" style="width: 70%; border-radius: 7px; padding: 8px; outline: none">
+     
+        
+     
+<select  style="width: 70%; border-radius: 7px; padding: 8px; outline: none">
+    <option value="volvo">Brands</option>
+  <option value="volvo">Puma</option>
+  <option value="saab">NIKE</option>
+  <option value="opel">Adidas</option>
+  <option value="audi">Converse</option>  
+  <option value="audi">New Balance</option>
+  <option value="audi">DC</option>
+</select>
+       <textarea name="message" placeholder="Message" style="width: 70%; border-radius: 7px; padding: 8px; height: 120px; outline: none"></textarea>
+         </form>
+         <button class="message-button" style="outline: none">Send Message</button>
+         <p style="color: white;">Please include your order ID for faster support</p>
+     </div>
+     
+   <div class=" mt-5 col-12 col-lg-4 col-md-6 col-sm-6 border p-4 three-section d-flex flex-column gap-3"style="line-height: 2;" >
+        <h4>Why Contact Us ?</h4>
+        <ul>
+          <li> 100% Authentic Products</li>
+          <li> Fast and Reliable Delivery</li>
+          <li> 24/7 Customer Support</li>
+          <li> Easy Returns and Exchanges</li>
+        </ul>      
+        <hr>
+            <h4>What We Help With ?</h4>
+                <ul>
+          <li> Order Tracking</li>
+          <li> Size & Fit Issues </li>
+          <li> Returns & Exchanges</li>
+        </ul>      
+    </div>
+</div>
+    <div class="d-flex justify-content-evenly p-4">
+
+    <div class ="row gap-3 border p-4 three-section mt-5" style="width: 40%;">
+      <h3>What can we help you with?</h3>
+      
+    <div class="col-12 col-lg-4 col-md-6 col-sm-6 ">
+       <button class="message-button" style="outline: none">order Tracking</button>
+       </div>
+       <div class="col-12 col-lg-4 col-md-6 col-sm-6">
+        <button class="message-button" style="outline: none">Size & Fit Issues</button>
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 col-sm-6">
+        <button class="message-button" style="outline: none ;height: auto;">Returns & Exchanges</button> 
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 col-sm-6">
+        <button class="message-button" style="outline: none">Payment Issues</button>
+        </div> <div class="col-12 col-lg-4 col-md-6 col-sm-6">
+        <button class="message-button" style="outline: none">Products Availability</button>
+        </div> <div class="col-12 col-lg-4 col-md-6 col-sm-6">
+        <button class="message-button" style="outline: none; height: auto;">Bulk / wholesale Inquiry</button>
+        </div>
+    </div>
+
+    <div class="row border p-4 three-section mt-5" width="50%" >
+<div  class="col-12  col-lg-12 col-md-12 col-sm-12 p-4 " style="line-height: 2;">
+        <h4>SELLER</h4>
+        <ul class="p-4">
+          <li>xyz, delhi, country</li>
+          <li>Mon - sat : 10AM - 7 PM </li>
+          <li>Sunday : closed</li>
+   
+        </ul>      
+    </div>
+
+    </div>
+</div>
+    
+  <div class="row justify-content-evenly mt-5 p-5  footer-last">
+    <div class="col-lg-4 col-md-3 col-sm-4 p-2" style="line-height: 1.6px;">
+      <h1 style="font-family: 'Orbitron', sans-serif; font-size: clamp(24px, 5vw,40px); font-weight: 700;">SELLER</h1>
+      <p style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.9; color: rgba(255, 255, 255, 0.85);">Elevate your step with Seller — where style meets comfort. Crafted for those who move with confidence. Where modern design meets everyday comfort.</p>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4 p-4">
+      <h3 style="font-family:system-ui,; font-weight: 600; font-size: 3rem; text-transform: uppercase;">Company</h3>
+      <ul style="list-style: none; padding: 0; font-family: 'Inter', sans-serif; font-size: 14px;">
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;font-size: 1.5rem;">About us</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Product</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Contact Us</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">FAQ</a></li>
+        <li><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Testimonials</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4 p-4">
+      <h4 style="font-family: 'Atkinson Hyperlegible Mono', monospace; font-weight: 600; font-size: 45px; text-transform: uppercase;">Follow Us</h4>
+      <div class="ms-4" style="display: flex; gap: 15px; font-size: 28px;">
+        <i class="fa-brands fa-facebook" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-instagram" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-twitter" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-linkedin" style="color: white; cursor: pointer;"></i>
+      
+         <br>
+    </div>
+        <input type="email" placeholder="Your email address">
+        
+    </div>
+  </div>
+  </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  </html>

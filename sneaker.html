@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller - Sneaker Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<style>
+body {
+  background-color: white;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  width: 130px;
+  height: 29px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-weight: 500;
+  transition: transform 0.6s ease;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.menu a::before {
+  content: "";
+  width: 130px;
+  height: 29px;
+  border-radius: 12px;
+  background-color: #100E09;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
+  transform: translateY(-110%);
+  transition: transform 0.6s ease;
+  overflow: hidden;
+}
+
+.menu a:hover::before {
+  transform: translateY(0%);
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.icon-section {
+  width: 30vw;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.main {
+  width: 100%;
+  height: 570px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.circle {
+  position: absolute;
+  right: -370px;
+  top: 0%;
+  width: 42%;
+  height: 620px;
+  background-color: #484848;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle h1 {
+  writing-mode: sideways-lr;
+  font-size: clamp(80px, 15vw, 148px);
+  margin-top: 50px;
+  color: white;
+  font-weight: 700;
+}
+
+.banner-wrapper {
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.1));
+}
+
+.banner-sneaker img {
+  max-width: 100%;
+  height: auto;
+}
+
+.brands-image {
+  width: 100%;
+  gap: 23px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.black-sneaker-2 {
+  background: linear-gradient(rgba(24, 23, 23, 0.93), rgba(35, 32, 32, 0.04), rgb(23, 22, 22), rgba(45, 43, 43, 0.926)), url("half.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pair-images {
+  height: 450px;
+}
+
+.pair-images img {
+  height: 100%;
+}
+
+
+.offer-item{
+height:50px;
+width:50px;
+background:black;border-radius:50%;
+color:white;font-size:23px;
+}
+
+
+.three-section{
+  transform: translateY(0px);
+   transition:1.3s;
+   box-shadow:rgba(69, 69, 79, 0.301) 0px 7px 29px 0px;
+   border-radius: 12px;
+ background-color:rgb(242, 242, 242);
+ color: black;
+}
+
+.three-section:hover{
+  transform: translateY(-50px);
+}
+
+.footer-banner{
+  width: 100%;
+  height: auto;
+  background-image: url(footer-banner\(1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ margin-top: 64px;
+}
+
+
+
+.footer-last{
+
+  background-color: #1E1E1E;
+  color: white;
+  padding: 40px; 
+  border-top: 2px solid gray;
+}
+
+
+
+
+.footer-last input{
+  background-color: #312c2c;;
+  border: none;
+  padding: 13px;
+  width: 100%;
+  margin-top: 40px;
+  outline: none;
+  border-radius: 12px;
+  height: 75px;
+}
+
+.footer-last input::placeholder{
+  color: white;
+ font-size: 1.4rem;
+ text-align: center;
+ 
+}
+
+
+
+
+@media (max-width: 740px) {
+  .brands-image {
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+  .black-sneaker-1 {
+  display: none;
+  }
+
+  .black-sneaker-2 {
+  min-height: 50vh;
+  }
+
+  .menu a {
+  width: 90px;
+  font-size: 12px;
+  }
+}
+
+@media (max-width: 875px) {
+  .icon-section {
+  width: 21%;
+  }
+
+  .icon-section i {
+  display: none;
+  }
+
+  .icon-section button {
+  width: 50px;
+  }
+
+  .nav-icon {
+  display: inline;
+  }
+
+  .menu {
+  display: flex;
+  width: 30%;
+  }
+
+  .menu a {
+  display: none;
+  }
+
+  i {
+  font-size: 12px;
+  }
+
+  .pair-images {
+  height: 220px;
+  }
+}
+
+@media (max-width: 920px) {
+  .main {
+  height: auto;
+  min-height: auto;
+  }
+
+  .banner-wrapper {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  }
+
+  .banner-wrapper > div {
+  width: 100% !important;
+  height: auto;
+  }
+
+  .circle {
+  display: none;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="d-flex mt-3 justify-content-between align-items-center" style="width: 100%; min-height: 60px;">
+    <div style="width: 33%; text-align: start; font-size: 35px; font-family: orbitron; font-weight: 300;">
+      <h3 class="mt-2 ms-3 ms-md-5" style="font-size: clamp(20px, 5vw, 35px);">SELLER</h3>
+    </div>
+    <div class="menu d-none d-md-flex justify-content-around align-items-center" style="width: 52%; font-size: 17px;">
+      <a href="sneaker.html">Home</a>
+      <a href="sneaker.about.html">About us</a>
+      <a href="sneaker.collection.html">Collection</a>
+      <a href="sneaker.brands.html">Brands</a>
+      <a href="sneaker.contact.html">Contact us</a> 
+    </div>
+
+    <div class="icon-section d-none d-md-flex align-items-center" style="width: 20%; gap: 12px;">
+      <i class="fa-solid fa-magnifying-glass" style="font-size: 23px;"></i>
+      <i class="fa-regular fa-user" style="font-size: 23px;"></i>
+      <button class="btn btn-outline-dark" style="width: 90px; height: 40px; border-radius: 20px; font-weight: 600;">Login</button>
+    </div>
+
+    <i class="nav-icon fa-solid fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" style="font-size: 30px; margin-right: 20px;"></i>
+  </div>
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions">
+    <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+    <ul style="height: auto; display: flex; flex-direction: column; gap: 15px; font-family: 'Atkinson Hyperlegible Mono', monospace; color: #000;">
+      <li><a href="sneaker.html" style="text-decoration: none; color: #000;">Home</a></li>
+      <li><a href="sneaker.about.html" class="menu-link"style="text-decoration: none;   color: #000;">About us</a></li>
+      <li><a href="sneaker.collection.html" style="text-decoration: none; color: #000;">Collection</a></li>
+      <li><a href="sneaker.brands.html" style="text-decoration: none; color: #000;">Brands</a></li>
+      <li><a href="sneaker.contact.html" style="text-decoration: none; color: #000;">Contact</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="s-banner main " >
+     <div class="d-flex banner-wrapper" style="width: 87%; height: 100%;">
+      <div class="main-heading" style="width: 100%; height: 100%;"> 
+      <h1 class="mt-5" style="margin-left: clamp(20px, 5vw, 70px); font-size: clamp(28px, 6vw, 80px); font-family: 'Inter', sans-serif;">The journey begins with the perfect pair</h1>
+      <p style="margin-left: clamp(20px, 5vw, 70px); font-size: clamp(15px, 2.2vw, 27px); word-spacing: 2px; color: rgba(81, 83, 82, 0.971);">Discover unparalleled style and unmatched comfort with spike. our meticulously crafted shoes redefine fashion, ensuring every step you take is a statement. Elevate your footwear game</p>
+      <button class="btn btn-outline-dark mt-3" style="width: 120px; height: 40px; margin-left: clamp(20px, 5vw, 176px); border-radius: 20px; font-weight: 600;">Get Started</button>
+      </div>
+      <div class="banner-sneaker d-none d-sm-block" style="width: 50%; height: 100%;">
+      <img src="s1.png" alt="sneaker">
+      <div class="d-flex justify-content-evenly">
+        <img src="s2.png" width="100px" alt="sneaker2">
+        <img src="s3.png" width="100px" alt="sneaker3">
+        <img src="s4.png" width="100px" alt="sneaker4">
+      </div>
+      </div>
+     </div>
+     <div class="circle">
+     <h1>SELLER</h1>
+     </div>
+  </div>
+
+  <div class="row g-0">
+    <div class="col-12 text-center py-4">
+    <h1>Top Brands</h1>
+    <p style="color: grey;">Find your Shoe Pair From 5000+ Collections</p>
+    </div>
+    <div class="brands-image col-12 d-flex justify-content-evenly align-items-center p-3">
+    <img src="nike-seeklogo.png" height="25px" alt="Nike">
+    <img src="adidas-seeklogo.png" height="30px" alt="Adidas">
+    <img src="puma-seeklogo.png" height="40px" alt="Puma">
+    <img src="the-north-face-logo.png" height="60px" alt="The North Face">
+    <img src="converse.png" height="60px" alt="Converse">
+    <img src="reebok.png" height="60px" alt="Reebok">
+    <img src="skechers.png" height="65px" alt="Skechers">
+    <img src="new-balance.png" height="65px" alt="New Balance">
+    </div>
+  </div>
+ 
+  <div class="p-3">
+  <div class="row g-0 ">
+    <div class="col-md-6 d-none d-md-block black-sneaker-1">
+    <img src="photo.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="black sneaker">
+    </div>
+    <div class="col-12 col-md-6">
+    <div class="black-sneaker-2">
+      <h1 class="ms-3 ms-md-5" style="font-size: clamp(25px, 7vw, 70px); color: aquamarine;">Seller: Stride in style Comfortably.</h1>
+      <p class="ms-3 ms-md-5" style="font-size: clamp(15px, 2.2vw, 24px); color: gray;">At Seller we're more than just a shoe reselling brands; we're curators of style and quality. With a passion for footwear, we handpick each pair, ensuring every step you take is a stride in fashion-forward confidence</p>
+      <button class="btn btn-outline-secondary mt-3 ms-3 ms-md-5" style="width: 120px; height: 40px; border-radius: 20px; font-weight: 600;">Get Started</button>
+    </div>
+    <div class="d-flex pair-images">
+      <img src="pair-1.jpg" class="img-fluid w-50 object-fit-cover" alt="pair1">
+      <img src="pair-2.jpg" class="img-fluid w-50 object-fit-cover" alt="pair2">
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+
+  <h1 class="mb-4" style="font-size: clamp(32px, 8vw, 62px);">
+    We Offer:
+  </h1>
+
+  <div class="row g-4 justify-content-evenly">
+
+
+    <div class="col-12 col-lg-7">
+      <div class="border p-4 d-flex flex-column gap-4">
+
+        <div class="d-flex align-items-center gap-3 ">
+          <div class="d-flex justify-content-center align-items-center offer-item">
+            1
+          </div>
+          <span style="font-weight:600;font-size:clamp(17px,3vw,24px);">
+            Top Notch Quality
+          </span>
+        </div>
+        <p style="font-size:clamp(14px,2vw,16px);">
+          At Seller we're more than just a shoe reselling brand; we curate style and quality to ensure confidence in every step.
+        </p>
+
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex justify-content-center align-items-center offer-item">
+            2
+          </div>
+          <span style="font-weight:600;font-size:clamp(16px,3vw,20px);">
+            Comfort and Support
+          </span>
+        </div>
+        <p style="font-size:clamp(14px,2vw,16px);">
+          Seller shoes redefine comfort and support, making every step effortless and enjoyable.
+        </p>
+
+       
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex justify-content-center align-items-center offer-item">
+            3
+          </div>
+          <span style="font-weight:600;font-size:clamp(16px,3vw,20px);">
+            Premium Design
+          </span>
+        </div>
+        <p style="font-size:16px;">
+          Each design is hand-picked to deliver modern aesthetics with long-lasting durability.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="col-12 col-lg-4">
+      <div class="border p-4 rounded-4 shadow">
+
+        <img src="Nike-Shoes.png" class="img-fluid rounded-4 mb-3" alt="Nike Shoes">
+
+        <h4 class="mb-1">Nike Air A500</h4>
+        <p class="text-secondary mb-3">
+          Color: White | Size: 9 | ₹1,299
+        </p>
+
+        <div class="d-flex align-items-center gap-2">
+          <img src="khaby.png" width="40" class="rounded-circle" style="background:violet;">
+          <span class="text-secondary">1000+ people bought</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row gap-5 justify-content-center border p-4 " style="width: 95%; margin:auto;"> 
+    <span class="" style="font-size: 4em; font-family: orbitron;">    Collection</span>
+  <div class="col-12 col-lg-3 col-md-6 col-sm-6 three-section p-4">
+       <img src ="two-pair.png" class="img-fluid" style="border-radius:12px; height: 400px; width: 400px; object-fit: cover;">
+         <h5>Ebernon Mid  </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹7,400.00</h5>
+  </div>
+  <div class="col-12 col-lg-3 col-md-6 col-sm-6 three-section p-4">
+  <img src="two-pair(2).png" class="img-fluid" style="border-radius:12px; height: 400px; width: 400px; object-fit: cover;">
+        <h5>Court Shot</h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹7,400.00</h5>
+  </div>
+  <div class="col-12 col-lg-3 col-md-6 col-sm-6 three-section p-4">
+       <img src="two-pair(6).png" class="img-fluid" style="border-radius:12px; height: 400px; width: 400px; object-fit: cover;">
+           <h5>Air Max Nuaxis</h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹9,000.00</h5>
+  </div>
+   <div class="col-12 col-lg-3 col-md-6 col-sm-6 three-section p-4">
+       <img src="two-pair(3).png" class="img-fluid" style="border-radius:12px; height: 400px; width: 400px; object-fit: cover;">
+           <h5>C1ty </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹12,400.00</h5>
+  </div>
+  <div class="col-12 col-lg-3 col-md-6 col-sm-6 three-section p-4">
+       <img src="two-pair(5).png" class="img-fluid" style="border-radius:12px; height: 400px; width: 400px; object-fit: cover;">
+           <h5>Full Force </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹3,400.00</h5>
+  </div>
+    <div class="col-12 col-lg-3 col-md-6 col-sm-6 three-section p-4">
+       <img src="two-pair(4).png" class="img-fluid" style="border-radius:12px; height: 400px; width: 400px; object-fit: cover;">
+           <h5>Court shot(black,6) </h5>  
+        <p style="color: grey; font-weight: 500;">Men's shoes</p>
+        <h5>MRP : ₹4,400.00</h5>
+  </div>
+</div>
+</div>
+
+  <div class="footer-banner ms-2">
+     <div class="d-flex justify-content-center align-items-center" style="height: 9rem;"> -->
+      <div class="" style="text-align: center;">
+        <h1 style="font-size:  2rem; color: white; margin: 0;">
+          Customer Opinions
+        </h1>
+        <p style="color: white; font-size: 1.3rem; margin-top: 1rem;">Discover what our customers say about their experience with our products. explore our customer opinions.</p>
+      </div>
+ </div>
+    <div class="row justify-content-evenly align-items-center gap-5 p-3 " style="width: 100%; height: auto; padding: 2rem 0;">
+      <div class="col-12 col-lg-3 col-md-12 col-sm-12 border three-section"  style="background-color: white; opacity: 0.8; border-radius: 13px; padding: 4rem; line-height: 1.9; height: auto;" >
+        <h1 style="font-size: 2rem; color: rgb(0, 0, 0); text-align: center;">Best shoes</h1>
+        <div style="margin-left: 50px;">
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+        </div>
+          <p class="p-1 border"> Seller shoes are more than just footwear - they're a statement of style and comfort. The quailty; they're a statement and i have recived countless complimats on their unique design;</p>
+          <img src="teacher-4.jpg" alt="customer" width="60" height="60" style="border-radius: 50%;">
+          <span style="font-weight: 600; margin-left: 10px;">Alexa Johnson</span><br>
+        
+
+
+        </div>
+      <div class="col-12 col-lg-3 col-md-12 col-sm-12 border three-section"  style="background-color: white; opacity: 0.8; border-radius: 13px; padding: 3.5rem; line-height: 1.9;" >
+        <h1 style="font-size:2rem; color: rgb(0, 0, 0); text-align: center;">Amazing Collection</h1>
+           <div style="margin-left: 10px;">
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+        </div>
+        <p class="p-1">Excellent product! The shoe quality is outstanding and clearly shows great craftsmanship. Very comfortable to wear, durable, and worth the price. Overall, this product offers great value and I’m very satisfied with the purchase.</p>
+        <img src="khaby.png" alt="customer" width="60" height="60" style="border-radius: 50%; background-color: aliceblue;">
+        <span style="font-weight: 600; margin-top: 0px;">Michael Smith</span><br>      
+
+      </div>
+      <div class="col-12 col-lg-3 col-md-12 col-sm-12 border three-section" style="background-color: white; opacity: 0.8; border-radius: 13px; padding: 4rem; line-height: 1.9;" >
+        <h1 style="font-size: 2rem; color: rgb(9, 9, 9); text-align: center;">Top Quality</h1>
+           <div style="margin-left: 60px;">
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+        </div>
+        <p class="p-1">great quality shoes totally worth the price; if you want something that is well-made, soft, lightweight, and comfortable, it's something you should go for</p>
+          <i class="fa-solid fa-circle-user" style="color: #5578b4; font-size: 3rem;"></i>
+        <span style="font-weight: 600; margin-left: 10px;">james Smith</span><br>  
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-evenly gap-5 mt-5 footer-last">
+    <div class="col-lg-3 col-md-4 col-sm-4 p-2" style="line-height: 1.6px;">
+      <h1 style="font-family: 'Orbitron', sans-serif; font-size: clamp(24px, 5vw,40px); font-weight: 700;">SELLER</h1>
+      <p style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.9; color: rgba(255, 255, 255, 0.85);">Elevate your step with Seller — where style meets comfort. Crafted for those who move with confidence. Where modern design meets everyday comfort.</p>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-4 p-4">
+      <h3 style="font-family:system-ui,; font-weight: 600; font-size: 3rem; text-transform: uppercase;">Company</h3>
+      <ul style="list-style: none; padding: 0; font-family: 'Inter', sans-serif; font-size: 14px;">
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;font-size: 1.5rem;">About us</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Product</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Contact Us</a></li>
+        <li style="margin-bottom: 8px;"><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">FAQ</a></li>
+        <li><a href="#" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 1.5rem;">Testimonials</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-4 p-4">
+      <h4 style="font-family: 'Atkinson Hyperlegible Mono', monospace; font-weight: 600; font-size: 45px; text-transform: uppercase;">Follow Us</h4>
+      <div class="ms-4" style="display: flex; gap: 15px; font-size: 28px;">
+        <i class="fa-brands fa-facebook" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-instagram" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-twitter" style="color: white; cursor: pointer;"></i>
+        <i class="fa-brands fa-linkedin" style="color: white; cursor: pointer;"></i>
+      
+         <br>
+    </div>
+        <input type="email" placeholder="Your email address">
+        
+    </div>
+  </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</html>
